@@ -11,7 +11,7 @@
 
 [![OpenStageAI](https://img.shields.io/badge/OpenStageAI-web-blue)](https://www.openstageai.com/)
 [![Blender](https://img.shields.io/badge/Blender-download-red)](https://www.blender.org/download/)
-[![Chat](https://img.shields.io/badge/chat-discord-blue)](TODO)
+[![Chat](https://img.shields.io/badge/chat-discord-blue)](https://discord.gg/fH5b9ngS)
 [![Chat](https://img.shields.io/badge/chat-Wechat-yellow)](TODO)
  <!-- this badge is too long, please place it in the last one to make it pretty --> 
 
