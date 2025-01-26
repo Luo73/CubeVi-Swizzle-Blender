@@ -16,7 +16,7 @@
  <!-- this badge is too long, please place it in the last one to make it pretty --> 
 
 <p align="center">
-    👋 加入我们的 <a href="TODO" target="_blank">WeChat</a> 和 <a href="TODO" target="_blank">Discord</a> 
+    👋 加入我们的 <a href="TODO" target="_blank">WeChat</a> 和 <a href="https://discord.gg/fH5b9ngS" target="_blank">Discord</a> 
 </p>
 
 ## 项目介绍
