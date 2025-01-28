@@ -11,12 +11,12 @@
 
 [![OpenStageAI](https://img.shields.io/badge/OpenStageAI-web-blue)](https://www.openstageai.com/)
 [![Blender](https://img.shields.io/badge/Blender-download-red)](https://www.blender.org/download/)
-[![Chat](https://img.shields.io/badge/chat-discord-blue)](https://discord.gg/fH5b9ngS)
+[![Chat](https://img.shields.io/badge/chat-discord-blue)](https://discord.com/invite/QBzDQrZy)
 [![Chat](https://img.shields.io/badge/chat-Wechat-yellow)](TODO)
  <!-- this badge is too long, please place it in the last one to make it pretty --> 
 
 <p align="center">
-    👋 加入我们的 <a href="TODO" target="_blank">WeChat</a> 和 <a href="https://discord.gg/fH5b9ngS" target="_blank">Discord</a> 
+    👋 加入我们的 <a href="TODO" target="_blank">WeChat</a> 和 <a href="https://discord.com/invite/QBzDQrZy" target="_blank">Discord</a> 
 </p>
 
 ## 项目介绍
