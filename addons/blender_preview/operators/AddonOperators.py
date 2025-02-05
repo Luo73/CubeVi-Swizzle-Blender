@@ -299,6 +299,13 @@ class LFDSaveOperator(bpy.types.Operator):
                 return (x_local / _Interval);
             }
 
+            vec3 linear_to_srgb(vec3 linear) {
+                bvec3 cutoff = lessThan(linear, vec3(0.0031308));
+                vec3 higher = vec3(1.055) * pow(linear, vec3(1.0 / 2.4)) - vec3(0.055);
+                vec3 lower = linear * vec3(12.92);
+                return mix(higher, lower, cutoff);
+            }
+
             vec2 get_uv_from_choice(vec2 pos, float choice_float) {
                 float choice = floor(choice_float * _ImgsCountAll);
                 vec2 choice_vec = vec2(
@@ -321,7 +328,7 @@ class LFDSaveOperator(bpy.types.Operator):
                 vec4 color = get_color(fragTexCoord, 0.0);
                 color.g = get_color(fragTexCoord, 1.0).g;
                 color.b = get_color(fragTexCoord, 2.0).b;
-                FragColor = color;
+                FragColor = vec4(linear_to_srgb(color.rgb), color.a);
             }
         '''
 
@@ -727,6 +734,13 @@ class LFDPreviewOperator(bpy.types.Operator):
                 return (x_local / _Interval);
             }
 
+            vec3 linear_to_srgb(vec3 linear) {
+                bvec3 cutoff = lessThan(linear, vec3(0.0031308));
+                vec3 higher = vec3(1.055) * pow(linear, vec3(1.0 / 2.4)) - vec3(0.055);
+                vec3 lower = linear * vec3(12.92);
+                return mix(higher, lower, cutoff);
+            }
+
             vec2 get_uv_from_choice(vec2 pos, float choice_float) {
                 float choice = floor(choice_float * _ImgsCountAll);
                 vec2 choice_vec = vec2(
@@ -749,7 +763,7 @@ class LFDPreviewOperator(bpy.types.Operator):
                 vec4 color = get_color(fragTexCoord, 0.0);
                 color.g = get_color(fragTexCoord, 1.0).g;
                 color.b = get_color(fragTexCoord, 2.0).b;
-                FragColor = color;
+                FragColor = vec4(linear_to_srgb(color.rgb), color.a); 
             }
         '''
 
