@@ -11,19 +11,18 @@
 
 [![OpenStageAI](https://img.shields.io/badge/OpenStageAI-web-blue)](https://www.openstageai.com/)
 [![Blender](https://img.shields.io/badge/Blender-download-red)](https://www.blender.org/download/)
-[![Chat](https://img.shields.io/badge/chat-discord-blue)](https://discord.com/invite/QBzDQrZy)
+[![Chat](https://img.shields.io/badge/chat-discord-blue)](https://discord.gg/kAucVzbvQM)
 [![Chat](https://img.shields.io/badge/chat-Wechat-yellow)](TODO)
  <!-- this badge is too long, please place it in the last one to make it pretty --> 
 
 <p align="center">
-    👋 加入我们的 <a href="TODO" target="_blank">WeChat</a> 和 <a href="https://discord.com/invite/QBzDQrZy" target="_blank">Discord</a> 
+    👋 加入我们的 <a href="TODO" target="_blank">WeChat</a> 和 <a href="https://discord.gg/kAucVzbvQM" target="_blank">Discord</a> 
 </p>
 
 ## 项目介绍
 本插件由**OpenStageAI**开发，旨在在[**C1**](https://www.openstageai.com/companion1)上实时展示Blender内部预览结果，以及光场图片本地保存。
 
 
-TODO 添加一些gif或者演示视频
 
 ## 版本要求
 
@@ -45,6 +44,7 @@ TODO 添加一些gif或者演示视频
 **此插件目前只支持Windows系统**
 
 ## 插件安装教程
+**首次安装时需要以管理权限打开blender**
 
 请参见[教程](doc/usage.md)
 
@@ -53,9 +53,6 @@ TODO 添加一些gif或者演示视频
 ### 设备连接
  1. 请确保您的电脑已经连接了[**C1**](https://www.openstageai.com/companion1)，同时[**OpenstageAI**](https://www.openstageai.com/download)（需保持打开），可以识别到设备
  2. 打开blender，切换到LFD插件界面，点击单击设备连接，下方会出现连接成功字样。  
- 
- TODO加gif
-
  3. 若连接失败，检查显示器是否正确显示，检查OpenStageAI软件是否识别到设备，第一次安装需要重启Blender方可正常使用。
 
 ### 实时渲染预览：
@@ -67,7 +64,6 @@ TODO 添加一些gif或者演示视频
 7. 由于渲染会造成一定的性能开销，此时操作blender面板会有一定卡顿。
 使用ESC键会自动退出实时渲染。
 
-TODO：加gif
 
 ### 保存光场图片：
 
@@ -75,7 +71,6 @@ TODO：加gif
 
 9. 单击保存光场图片，即可保存当前活动相机的png格式图片。（目前仅支持png）
 
-TODO：加gif
 
 ## 限制
 
