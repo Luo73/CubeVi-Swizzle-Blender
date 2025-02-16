@@ -23,7 +23,7 @@ bl_info = {
     "name": 'blender_preview',
     "author": 'OpenStageAI',
     "blender": (4, 2, 1),
-    "version": (1, 0, 0),
+    "version": (1, 0, 2),
     "description": 'Blender Preview for LFD',
     "doc_url": '',
     "tracker_url": '',
