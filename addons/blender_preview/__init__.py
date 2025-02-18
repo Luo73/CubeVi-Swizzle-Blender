@@ -17,7 +17,7 @@ bl_info = {
     "name": "blender_preview",
     "author": "CubeVi",
     "blender": (4, 2, 1),
-    "version": (1, 0, 2),
+    "version": (1, 0, 3),
     "description": "Blender Preview for LFD",
     "doc_url": "",
     "tracker_url": "",
