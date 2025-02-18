@@ -20,7 +20,7 @@
 </p>
 
 ## 项目介绍
-本插件由**OpenStageAI**开发，旨在在[**C1**](https://www.openstageai.com/companion1)上实时展示Blender内部预览结果，以及光场图片本地保存。
+本插件由**OpenStageAI**开发，旨在在[**C1**](https://www.openstageai.com/companion1)上实时展示Blender内部预览结果，以及预览，光场图片本地保存。
 
 
 
@@ -36,7 +36,7 @@
 | Blender3.5 | [3.5](https://download.blender.org/release/Blender3.5/) | 
 | Blender3.6 | [3.6](https://download.blender.org/release/Blender3.6/) | 
 | Blender4.0 | [4.0](https://download.blender.org/release/Blender4.0/) | 
-| Blender4.1 | [4.1](https://download.blender.org/release/Blender4.0/) | 
+| Blender4.1 | [4.1](https://download.blender.org/release/Blender4.1/) | 
 | Blender4.2 | [4.2](https://download.blender.org/release/Blender4.2/) | 
 | Blender4.3 | [4.3](https://download.blender.org/release/Blender4.3/) | 
 
@@ -51,25 +51,43 @@
 ## 插件使用
 
 ### 设备连接
- 1. 请确保您的电脑已经连接了[**C1**](https://www.openstageai.com/companion1)，同时[**OpenstageAI**](https://www.openstageai.com/download)（需保持打开），可以识别到设备
- 2. 打开blender，切换到LFD插件界面，点击单击设备连接，下方会出现连接成功字样。  
- 3. 若连接失败，检查显示器是否正确显示，检查OpenStageAI软件是否识别到设备，第一次安装需要重启Blender方可正常使用。
 
-### 实时渲染预览：
+1. 请确保您的电脑已经连接了[**C1**](https://www.openstageai.com/companion1)，同时[**OpenstageAI**](https://www.openstageai.com/download)（需保持打开），可以识别到设备
+    
+2. 打开blender，切换到LFD插件界面，点击单击设备连接，下方会出现连接成功字样。
+    
+3. 若连接失败，检查显示器是否正确显示，检查OpenStageAI软件是否识别到设备。
 
-4. 在右侧栏目中，选择”输出”，将分辨率设置为540*960或1440*2560
-5. 在设备成功连接后，单击实时渲染预览
-6. 在弹出的界面输入显示器的x轴分辨率，单击确定，会自动全屏显示
-（取决于Windows的连接方式，假如主屏的横向分辨率为2560，C1副屏默认在主屏右边，这里就设置2560. 如果不小心显示在主屏上，需要返回blender窗口，摁Esc键取消）
-7. 由于渲染会造成一定的性能开销，此时操作blender面板会有一定卡顿。
-使用ESC键会自动退出实时渲染。
+### 相机视锥设置
 
+4. 通过设置相机的前，后，焦平面，可以达成不同的入屏出屏效果。
 
-### 保存光场图片：
+5. 远近剪裁面：只有在远近剪裁面视锥内的物体才会被渲染
 
-8. 在屏幕右侧的栏目中选择**输出**，在该界面更改你想要将光场图保存的路径。
+6. 焦平面：相机的焦平面。在焦平面上的物体将获得最清晰的视觉展示效果。焦平面靠近相机的一侧会展示出屏效果，焦平面远离相机的一侧会展示入屏效果，远离焦平面的物体会变得模糊。
 
-9. 单击保存光场图片，即可保存当前活动相机的png格式图片。（目前仅支持png）
+详细教程请参见：[教程](doc/usage.md)
+
+### 实时预览：
+
+7. 在右侧栏目中，选择”输出”，将分辨率设置为540*960或1440*2560
+
+8. 在设备成功连接后，单击实时渲染预览,在弹出的选项框里设置图片想放置的x轴分辨率
+
+9. 由于渲染会造成一定的性能开销，此时操作blender面板会有一定卡顿。
+    使用ESC键会自动退出实时渲染。
+
+### 保存预览图片：
+
+ 10. 在屏幕右侧的栏目中选择**输出**，在该界面更改你想要将光场图保存的路径。
+
+ 11. 单击保存宫格/光场预览图片，即可保存预览的png格式图片。
+
+### 保存渲染图片：
+
+ 12. 单击保存视点渲染图片，即可保存40张单视角的图片。
+
+ 13. 单击合成宫格图片，即可将40张单视角图片按名称顺序合成为宫格图片。
 
 
 ## 限制
