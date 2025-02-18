@@ -84,11 +84,11 @@ blender_preview.zip插件安装包（不需解压）
 
 焦平面决定了相机拍摄的焦平面位置，在焦平面位置，相机拍摄的图像最清晰。在焦平面位置前后，相机拍摄的图像会逐渐变得模糊。
 
-在焦平面靠近相机一侧的空间内，渲染出来的图片会有入屏效果。
+在焦平面靠近相机一侧的空间内，渲染出来的图片会有出屏效果。
 
 ![](img/image_out.png)
 
-在焦平面远离相机一侧的空间内，渲染出来的图片会有出屏效果。
+在焦平面远离相机一侧的空间内，渲染出来的图片会有入屏效果。
 
 ![](img/image_in.png)
 
@@ -143,13 +143,17 @@ Q: PIL/ScreenInfo等依赖库安装失败
 
 A: 常见的情况是由于pip install安装源不稳定，导致插件安装失败。在后续版本会通过本地安装依赖库，避免此类问题。
    当前的解决办法为：在左上角切换到blender内部的python控制台，依次输入以下指令：
+   
    import subprocess
+   
    import sys
+   
    subprocess.check_call([sys.executable, "-m", "pip", "install", "Pillow"])
+       
 
    注意：pillow可以修改为任意的缺少的依赖包名称
 
-![](img/image_15.png)
+![](img/image_fail.png)
 
 Q: 我该如何退出实时预览？
 
