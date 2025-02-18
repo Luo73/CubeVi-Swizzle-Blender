@@ -42,7 +42,6 @@ REQUIRED_LIBRARIES = [
     "numpy",
     "Pillow",  # Pillow 替代 PIL
     "pywin32",
-    "screeninfo"
     # 包含 win32file 和 win32pipe
     "pycryptodome",  # 用于加密解密
     "pycryptodomex"

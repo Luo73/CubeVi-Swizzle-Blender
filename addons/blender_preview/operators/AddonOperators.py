@@ -19,7 +19,6 @@
 import bpy
 import gpu
 import sys
-from screeninfo import get_monitors
 from gpu_extras.batch import batch_for_shader
 from bpy_extras import view3d_utils
 from mathutils import Matrix, Vector
@@ -1185,11 +1184,11 @@ class LFDPreviewOperator(bpy.types.Operator):
 
     _handle = None  # 用于存储绘制句柄
 
-    # display_x: IntProperty(
-    #     name="x-axis of display",
-    #     description="x axis of display",
-    #     default=temp_x,
-    # )
+    display_x: IntProperty(
+        name="x-axis of display",
+        description="x axis of display",
+        default=2560,
+    )
 
     # 执行操作的前提
     @classmethod
@@ -1598,8 +1597,9 @@ class LFDPreviewOperator(bpy.types.Operator):
         flag = True
         # self.screen = initialize_pygame_window(self.display_x)
         global temp_x
-        monitors = get_monitors()
-        initialize_cv_window(monitors[0].width)
+        # monitors = get_monitors()
+        x = self.display_x
+        initialize_cv_window(x)
         # 判断离屏渲染
         if not self.setup_offscreen_rendering():
             return {'CANCELLED'}
@@ -1673,11 +1673,9 @@ class LFDPreviewOperator(bpy.types.Operator):
 
 
     # # 在execute之前执行这个方法，用作初始化
-    # def invoke(self, context, event):
-    #     # return self.execute(context), context.window_manager.invoke_props_dialog(self)
-    #     return context.window_manager.invoke_props_dialog(self)
-
-
+    def invoke(self, context, event):
+        # return self.execute(context), context.window_manager.invoke_props_dialog(self)
+        return context.window_manager.invoke_props_dialog(self)
 
 class LFDRenderOperator(bpy.types.Operator):
     """Save LFD Render image"""
