@@ -17,7 +17,7 @@ bl_info = {
     "name": "blender_preview",
     "author": "CubeVi",
     "blender": (4, 2, 1),
-    "version": (1, 0, 1),
+    "version": (1, 0, 2),
     "description": "Blender Preview for LFD",
     "doc_url": "",
     "tracker_url": "",
@@ -44,6 +44,8 @@ REQUIRED_LIBRARIES = [
     "pywin32",
     "screeninfo"
     # 包含 win32file 和 win32pipe
+    "pycryptodome",  # 用于加密解密
+    "pycryptodomex"
 ]
 
 def ensure_packages():
